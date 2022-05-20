@@ -1,0 +1,57 @@
+div.centrado{
+
+    margin: auto;
+    max-width: 50%;
+    text-align: center;
+    padding: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+div.imagen{
+    text-align: center;
+    max-width: 40%;
+}
+div.textotitulo{
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+div.textodetalle{
+    text-align: center;
+    font-family:  Verdana, Geneva, Tahoma, sans-serif;
+}
+ul {
+    list-style-type: none;
+    margin: auto;
+    padding: 20;
+    overflow: hidden;
+    background-color: blue;
+}
+li {
+    float: right;
+} 
+li a{
+    display: block;
+    color: green;
+    text-align: center;
+    padding: 30px 15px;
+    text-decoration:none;
+}
+
+li a:hover{
+    background-color: gray;
+}
+
+div.menugaleria{
+    margin: 5px;
+    border: 2px lightslategray;
+    float: none;
+    max-width: 150px;
+}
+
+div.menugaleria:hover{
+    border: 5px black;
+}
+
+div.nombre{
+    padding: 15px;
+    text-align: center;
+}
