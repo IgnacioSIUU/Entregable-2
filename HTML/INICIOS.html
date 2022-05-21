@@ -1,7 +1,6 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title></title> 
 	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Validation-Engine/2.6.4/jquery-1.8.2.min.js" 
@@ -18,11 +17,94 @@
 
 	<link rel="stylesheet" href="../CSS respaldo.css">
 	
-
+    <title>Iniciar sesión de la cuenta</title>
 </head>  
 <body>
 
-    <!-- Validación de datos -->
+    <form class="formulario">
+    
+        <h1>Fase de Login</h1>
+         <div class="contenedor">
+         
+         
+             
+             <div class="input-contenedor">
+             <i class="fas fa-envelope icon"></i>
+             <input type="text" placeholder="Correo Electronico (Campo Obligatorio)">
+             
+             </div>
+             
+             <div class="input-contenedor">
+            <i class="fas fa-key icon"></i>
+             <input type="password" placeholder="Contraseña (Campo Obligatorio)">
+             
+             </div>
+             <input type="submit" value="Login" class="button">
+            </br>
+            </br>
+             <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
+             <p>¿No tienes una cuenta? <a class="link" href="../HTML/REGISTER.html">Registrate </a></p>
+         </div>
+        </form>
+
+</body>
+</html>
+
+
+
+
+<!--
+
+        <form id="registrarDatos" name="registrarDatos" action="#" method="post">
+    
+        <h1>Fase de Login</h1>
+         <div class="contenedor">
+         
+         
+             
+             <div class="input-contenedor">
+                    <i class="fas fa-envelope icon"></i>
+                    <input type="text" id="correo" name="correo" class="validate[required,custom[email]]" placeholder="Correo Electronico (Campo Obligatorio)"
+                    data-errormessage-value-missing="El Campo correo es Obligatorio"
+                    data-errormessage-custom-error="Formato: usuario@mail.com" value=""/>
+             </div>
+             
+             <div class="input-contenedor">
+                    <i class="fas fa-key icon"></i>
+                    <input type="password" id="contraseña" name="contraseña" class="validate[required,custom[password]]" placeholder="Contraseña (Campo Obligatorio)"
+                    data-errormessage-value-missing="El Campo contraseña es Obligatorio" value=""/>
+             </div>
+
+             <div class="input-contenedor">
+                <input type="submit" value="Login" class="button">
+                    $("#form1").submit(
+                        fuction(){
+                            alert("El formulario se ha enviado correctamente")
+                        }
+                    );
+            </div>
+            </br>
+            </br>
+             <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
+             <p>¿No tienes una cuenta? <a class="link" href="../HTML/REGISTER.html">Registrate </a></p>
+         </div>
+        </form>
+
+        <script>
+        $(document).ready(() => {
+            $('#registrarDatos').validationEngine();
+        });
+    </script>
+
+-->
+
+
+
+
+
+<!--
+
+    <!- Validación de datos
 
     <div id="resultadoValidacion"></div>
 
@@ -66,9 +148,8 @@
             $('#registrarDatos').validationEngine();
         });
     </script>
-</body>
-</html>
 
+-->
 
 
 
