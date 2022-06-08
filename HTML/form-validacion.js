@@ -1,9 +1,12 @@
 <script src="js/form-validation.js"></script>
 $(function() {
  
-    $("form[name='registro']").validate({
+    $("formulario_registro").validate({
       rules: {
-        nombre: "required",
+        nombre: {
+          required: true,
+          minlength: 3
+        },
         email: {
           required: true,
           email: true

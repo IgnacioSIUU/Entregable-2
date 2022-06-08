@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
 	<link rel="stylesheet" href="../CSS respaldo.css">
     <script src="vendor/jquery/dist/jquery.min.js"></script>
-    <script src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="js/form-validation.js"></script>	
     <title>Registrar la cuenta</title>
 
 </head>  
@@ -17,25 +15,19 @@
     
     <h1>Fase de Registro</h1>
      <div class="contenedor">
-    <form action="2" name="registro">
+    <form action="" id="formulario_registro">
      
-     <div class="input-contenedor">
-         <i class="fas fa-user icon"></i>
+     <div id="contenido">
+         <label for="nombre">Nombre Completo</label>
          <input type="text" name="nombre" id="nombre" placeholder="Nombre Completo">
-         
-         </div>
-         
-         <div class="input-contenedor">
-         <i class="fas fa-envelope icon"></i>
+         <br>
+        <label for="email">Correo electronico</label>
          <input type="email" name= "email" id="email" placeholder="Correo Electronico">
-         
-         </div>
-         
-         <div class="input-contenedor">
-        <i class="fas fa-key icon"></i>
+        <br>
+        <label for="contraseña">Contraseña</label>
          <input type="password" name="password" id="password" placeholder="Contraseña">
-         
-         </div>
+        <br>
+        <button type="button">Registrarse</button>
          <input type="submit" value="Registrate" class="button">
         </br>
         </br>
@@ -43,6 +35,11 @@
          <p>¿Ya tienes una cuenta? <a class="link" href="../HTML/INICIOS.html">Iniciar Sesion</a></p>
      </div>
     </form>
-    </form>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+  <script src="form-validacion.js"></script>
 </body>
 </html>
