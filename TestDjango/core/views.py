@@ -6,7 +6,7 @@ from .forms import ArteForm
 def home(request):
     lista = Arte.objects.all()
     contexto = {
-        'arte': lista,
+        'artes': lista,
     }
     return render(request, 'core/index.html', contexto)
 
@@ -19,7 +19,7 @@ def form_arte(request):
         if formulario.is_valid():
             formulario.save()
             contexto['mensaje']='Datos guardados correctamente'
-    return render(request, 'core/form-arte.html', contexto)
+    return render(request, 'core/form_arte.html', contexto)
 
 def form_mod_arte(request, id):
     arte = Arte.objects.get(idprod=id)
