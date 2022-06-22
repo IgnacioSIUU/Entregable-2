@@ -38,3 +38,5 @@ def form_del_arte(request, id):
     arte.delete()
     return redirect(to="home")
 
+def main_pinturas(request):
+    return render(request, 'core/main_pinturas.html')
