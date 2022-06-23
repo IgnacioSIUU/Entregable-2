@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from .models import Arte
 from .forms import ArteForm
+from django.shortcuts import render, HttpResponse
+from django.contrib.auth import views as auth_views
 # Create your views here.
 
 def home(request):
@@ -40,3 +42,8 @@ def form_del_arte(request, id):
 
 def main_pinturas(request):
     return render(request, 'core/main_pinturas.html')
+
+def Home(request):
+    return render(request,'core/Home.html')
+
+

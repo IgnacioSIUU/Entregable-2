@@ -7,4 +7,5 @@ urlpatterns = [
     path('form-mod-arte/<id>', form_mod_arte, name="form_mod_arte"),
     path('form-del-arte/<id>', form_del_arte, name="form_del_arte"),
     path('main_pinturas',main_pinturas,name="main_pinturas"),
+    
 ]
