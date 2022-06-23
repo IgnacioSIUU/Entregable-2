@@ -6,7 +6,8 @@ from rest_framework.parsers import JSONParser
 from django.views.decorators.csrf import csrf_exempt
 from core.models import Arte
 from .serializers import ArteSerializer
-
+from django.contrib import messages
+from django.shortcuts import render, redirect
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 
