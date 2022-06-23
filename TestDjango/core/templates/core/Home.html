@@ -42,6 +42,21 @@
                                 <li><a href="../HTML/FORMULARIO.html">Formulario</a></li>
                             </ul>
                         </li>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">HOLANDA, {{user.first_name}}</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="logout_user">LOGOUT</a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                          <a class="nav-link" href="register">SIGN UP</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="login_user">LOGIN</a>
+                        </li>
+                        {% endif %}
                         <li><a href="#">Obras artisticas</a></li>
                     </ul>
                 </nav>

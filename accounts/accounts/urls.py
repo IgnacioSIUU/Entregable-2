@@ -1,4 +1,4 @@
-"""TestDjango URL Configuration
+"""accounts URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.0/topics/http/urls/
@@ -14,14 +14,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
-from django.contrib.auth import views as auth_views
+from django.urls import path
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('core.urls')),
-    path('api/',include('rest_arte.urls')),
-    path('login/',include('home.urls')),
-    path('accounts/', include('accounts.urls'))
-    
+    path("register", views.register, name="register"),
+    path("login_user", views.login_user, name="login_user"),
+    path("logout_user", views.logout_user, name="logout_user"),
+    path("home", views.home, name="home")
 ]
