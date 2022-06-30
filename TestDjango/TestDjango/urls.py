@@ -21,7 +21,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('core.urls')),
     path('api/',include('rest_arte.urls')),
-    path('login/',include('home.urls')),
-    path('accounts/', include('accounts.urls'))
+    path('tiendita/', include('tiendita.urls')),
+    path('carrito/',include('carrito.urls')),
+    path('autenticacion/', include('autenticacion.urls')),
     
 ]

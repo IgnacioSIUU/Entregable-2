@@ -1,0 +1,81 @@
+body {
+    background-color: #EFEFEF;
+  }
+  
+  .fondo-footer1{
+      background-color: #737373;
+      color: azure;
+      padding-top: 0.5%;
+  }
+  
+  .fondo-barranav{
+    background-color: #153B5E;
+  }
+  
+  .img-productos{
+    width: 30%;
+  }
+  
+  .encabezados{
+      color: white; 
+      background-color: #097910; 
+      padding-bottom: 30px; 
+      padding-top: 30px;
+  }
+  
+  
+  /*!
+   * INICIO registro
+   */
+  
+  .form-registro {
+      background: #24303c;
+      padding: 30px;
+      margin: auto;
+      margin-top: 2%;
+      margin-bottom: 6%;
+      border-radius: 10px;
+      color: white;
+      box-shadow: 7px 13px 37px #000;
+    }
+    
+    .caja-texto {
+      width: 100%;
+      background: #7BC2E5;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+      border: 1px solid #1f53c5;
+      font-family: 'calibri';
+      font-size: 18px;
+    }
+    ::placeholder { color: black; }
+    
+    
+  /*!
+   * FIN registro
+   */
+  
+  
+  article {
+    position: relative;
+    overflow: hidden;
+    background: rgba(0,0,0,0.7);
+    width: 50%;
+    border: 2px solid #FFA800;
+    border-radius: 10px;
+    box-shadow: 0 0 4px #FFA800;
+    color: #FFA800;
+    text-align: center;
+  }
+  
+  #mapa {
+    height: 400px;
+    width: 1100px;
+  }
+  
+  
+  /*!
+   * FIN CSS personalizados
+   */
+  

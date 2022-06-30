@@ -1,0 +1,83 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <!-- Bootstrap -->
+    <link href="{% static '/core/css/bootstrap-4.3.1.css'%}" rel="stylesheet">
+	  <!-- CSS -->
+    <link href="{% static '/core/css/style.css'%}" rel="stylesheet">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="{% static '/core/js/jquery-3.3.1.min.js'%}"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{% static '/core/js/popper.min.js'%}"></script>
+    <script src="{% static '/core/js/bootstrap-4.3.1.js'%}"></script>
+	  
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark fondo-barranav">
+        <div class="container">
+          <img class="navbar-brand" id="logo" src="{% static '/core/img/LOGO.jpg'%}" width="10%"></img>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'home' %}">INICIO </a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PRODUCTOS</a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{% url 'tiendita' %}">ARBUSTOS</a>
+                  </div>
+                </li>
+              </ul>
+
+              <form class="form-inline my-2 my-lg-0">
+                {% if user.is_authenticated %}
+                <a style="color: white">Hola {{ user.username }} </a> &nbsp;&nbsp; <a href="{% url 'cerrar_sesion' %}" style="color: white">Cerrar Sesión </a>
+              
+                {% else %}
+    
+                <a href="#" style="color: white">Login </a> &nbsp; <a style="color: white"> | </a> &nbsp; <a href="{% url 'Autenticacion' %}" style="color: white">Registrarse </a>
+                {% endif %}
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <h2 class="text-center encabezados">LOGIN</h2>
+      
+        
+        <div class="container">
+            <form class="form-horizontal; form-registro" action="" method="post"> 
+          {% csrf_token %}
+    
+          {% if messages %}
+    
+            {% for mensaje in messages %}
+    
+            <span class="alert alert-{{mensaje.tags}}"> {{mensaje}} </span>
+    
+            {% endfor %}
+    
+          {% endif %}
+          <br><br>
+          {{ form|crispy }}
+              <div class="row">
+                  <br><br>
+                    <div class="col-lg-12" align="center">
+                         <input class="btn btn-success" type="submit" value="Login">
+                    </div>
+              </div>
+            </form>
+      </div>
+
+  </body>
+</html>

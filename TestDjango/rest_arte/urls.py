@@ -8,5 +8,5 @@ urlpatterns = [
     path('lista_arte', lista_arte, name="lista_arte"),
     path('detalle_arte/<id>',detalle_arte,name="detalle_arte"),
     path('login',login,name="login"),
-    path('home/', views.home, name='home'),
+    
 ]

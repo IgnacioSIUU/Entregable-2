@@ -1,6 +1,9 @@
 from django.urls import path
 from .views import home, form_arte, form_mod_arte, form_del_arte, main_pinturas
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('',home,name="home"),
     path('form_arte', form_arte, name="form_arte"),
@@ -9,3 +12,5 @@ urlpatterns = [
     path('main_pinturas',main_pinturas,name="main_pinturas"),
     
 ]
+
+urlpatterns+=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
